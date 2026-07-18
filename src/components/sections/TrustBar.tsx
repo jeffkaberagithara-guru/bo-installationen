@@ -1,22 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import * as Icons from "lucide-react";
+import { Award, Briefcase, Star } from "lucide-react";
 import { trustData, type TrustItem } from "@/data/trustBar";
 
-const AnimatedCounter = ({
-  value,
-  suffix,
-  label,
-  icon: IconName,
-}: TrustItem) => {
+// Map icon strings to components
+const iconMap = {
+  award: Award,
+  briefcase: Briefcase,
+  star: Star,
+};
+
+const AnimatedCounter = ({ value, suffix, label, icon }: TrustItem) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
+  const IconComponent = iconMap[icon as keyof typeof iconMap];
+
   useEffect(() => {
     if (isInView) {
       let start = 0;
-      const duration = 2000;
       const step = Math.max(1, Math.floor(value / 60));
       const increment = () => {
         start += step;
@@ -31,13 +34,9 @@ const AnimatedCounter = ({
     }
   }, [isInView, value]);
 
-  const IconComponent = Icons[IconName as keyof typeof Icons];
-
   return (
     <div ref={ref} className="flex flex-col items-center gap-2">
-      {IconComponent && (
-        <IconComponent className="h-8 w-8 text-brass" strokeWidth={1.5} />
-      )}
+      <IconComponent className="h-8 w-8 text-brass" strokeWidth={1.5} />
       <div className="flex items-baseline gap-0.5">
         <span className="text-3xl font-bold text-white sm:text-4xl">
           {typeof value === "number" && value % 1 === 0
