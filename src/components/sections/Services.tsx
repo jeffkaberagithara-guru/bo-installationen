@@ -1,9 +1,25 @@
 import { motion } from "framer-motion";
-import * as Icons from "lucide-react";
+import {
+  Building2,
+  PenTool,
+  PencilRuler,
+  Wrench,
+  Package,
+  ArrowRight,
+} from "lucide-react";
 import { services, type Service } from "@/data/services";
 
-const ServiceCard = ({ title, description, icon: IconName, href }: Service) => {
-  const IconComponent = Icons[IconName as keyof typeof Icons];
+// Map icon strings to components
+const iconMap = {
+  building2: Building2,
+  pentool: PenTool,
+  pencilruler: PencilRuler,
+  wrench: Wrench,
+  package: Package,
+};
+
+const ServiceCard = ({ title, description, icon, href }: Service) => {
+  const IconComponent = iconMap[icon as keyof typeof iconMap];
 
   return (
     <motion.div
@@ -16,9 +32,7 @@ const ServiceCard = ({ title, description, icon: IconName, href }: Service) => {
     >
       {/* Icon */}
       <div className="mb-4 inline-flex rounded-lg bg-brass/10 p-3 text-brass transition-all group-hover:bg-brass/20 group-hover:shadow-[0_0_30px_rgba(201,168,76,0.15)]">
-        {IconComponent && (
-          <IconComponent className="h-7 w-7" strokeWidth={1.5} />
-        )}
+        <IconComponent className="h-7 w-7" strokeWidth={1.5} />
       </div>
 
       {/* Title */}
@@ -35,7 +49,7 @@ const ServiceCard = ({ title, description, icon: IconName, href }: Service) => {
         className="inline-flex items-center gap-1 text-sm font-medium text-brass transition-all group-hover:gap-2"
       >
         Mehr erfahren
-        <Icons.ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
       </a>
     </motion.div>
   );
