@@ -2,7 +2,7 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: string; // Lucide icon name
+  icon: string;
   href: string;
 }
 
@@ -12,7 +12,7 @@ export const services: Service[] = [
     title: "Neubau",
     description:
       "Full-system rough-ins, gas lines, septic, and slab plumbing for residential and commercial new builds.",
-    icon: "Building2",
+    icon: "building2",
     href: "#neubau",
   },
   {
@@ -20,7 +20,7 @@ export const services: Service[] = [
     title: "Design & Beratung",
     description:
       "3D blueprints, code compliance, eco-efficient systems, and smart home integration from concept to reality.",
-    icon: "PenTool",
+    icon: "pentool",
     href: "#design",
   },
   {
@@ -28,7 +28,7 @@ export const services: Service[] = [
     title: "Renovierung",
     description:
       "Bathroom and kitchen remodels, whole-house repiping, and fixture upgrades that transform your space.",
-    icon: "PencilRuler",
+    icon: "pencilruler",
     href: "#renovierung",
   },
   {
@@ -36,7 +36,7 @@ export const services: Service[] = [
     title: "Reparatur",
     description:
       "24/7 emergency service, leak detection, drain cleaning, and rapid repairs for every plumbing issue.",
-    icon: "Wrench",
+    icon: "wrench",
     href: "#reparatur",
   },
   {
@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: "Installation",
     description:
       "Water heaters, filtration systems, sump pumps, smart plumbing devices, and gas appliance hookups.",
-    icon: "Package",
+    icon: "package",
     href: "#installation",
   },
 ];
