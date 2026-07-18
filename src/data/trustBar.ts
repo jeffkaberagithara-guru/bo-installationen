@@ -3,7 +3,7 @@ export interface TrustItem {
   value: number;
   suffix: string;
   label: string;
-  icon: string; // Lucide icon name
+  icon: string;
 }
 
 export const trustData: TrustItem[] = [
@@ -12,20 +12,20 @@ export const trustData: TrustItem[] = [
     value: 15,
     suffix: "+",
     label: "Jahre Erfahrung",
-    icon: "Award",
+    icon: "award",
   },
   {
     id: "projects",
     value: 500,
     suffix: "+",
     label: "Projekte realisiert",
-    icon: "Briefcase",
+    icon: "briefcase",
   },
   {
     id: "rating",
     value: 4.9,
     suffix: "/5",
     label: "Bewertungen",
-    icon: "Star",
+    icon: "star",
   },
 ];
