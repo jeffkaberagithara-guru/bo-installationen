@@ -4,13 +4,11 @@ import { Cpu, ShieldCheck } from "lucide-react";
 const Innovation = () => {
   return (
     <section className="relative overflow-hidden bg-space-light/30 py-20">
-      {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 h-full w-full bg-[radial-gradient(ellipse_at_50%_50%,rgba(201,168,76,0.1),transparent_70%)]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,9 +29,7 @@ const Innovation = () => {
           </p>
         </motion.div>
 
-        {/* Feature Cards */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-          {/* Card 1: Tech-Driven Diagnostics */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -53,7 +49,6 @@ const Innovation = () => {
             </p>
           </motion.div>
 
-          {/* Card 2: Certified Quality */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +70,6 @@ const Innovation = () => {
           </motion.div>
         </div>
 
-        {/* Decorative animated element */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
