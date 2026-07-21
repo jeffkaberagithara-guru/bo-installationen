@@ -16,7 +16,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "neubau",
     description:
       "Komplette Sanitärinstallation für ein modernes Mehrfamilienhaus mit 12 Wohneinheiten.",
-    image: "/images/portfolio/neubau-1.jpg",
+    image: "/images/portfolio-1.jpeg",
     tags: ["Neubau", "Mehrfamilienhaus", "Sanitär"],
   },
   {
@@ -25,9 +25,9 @@ export const portfolioItems: PortfolioItem[] = [
     category: "renovierung",
     description:
       "Luxuriöses Badezimmer mit begehbarer Dusche, freistehender Badewanne und smarten Armaturen.",
-    image: "/images/portfolio/renovierung-1.jpg",
-    beforeImage: "/images/portfolio/before-bathroom-1.jpg",
-    afterImage: "/images/portfolio/after-bathroom-1.jpg",
+    image: "/images/portfolio-2.jpeg",
+    beforeImage: "/images/transform-1.jpeg",
+    afterImage: "/images/transform-2.jpeg",
     tags: ["Renovierung", "Badezimmer", "Luxus"],
   },
   {
@@ -36,7 +36,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "gewerbe",
     description:
       "Sanitärinstallation für ein 5-stöckiges Bürogebäude mit barrierefreien WC-Anlagen.",
-    image: "/images/portfolio/gewerbe-1.jpg",
+    image: "/images/portfolio-3.jpeg",
     tags: ["Gewerbe", "Büro", "Barrierefrei"],
   },
   {
@@ -45,9 +45,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "renovierung",
     description:
       "Moderne Küche mit Insel, Quooker-Wasserhahn und integriertem Abfallsystem.",
-    image: "/images/portfolio/renovierung-2.jpg",
-    beforeImage: "/images/portfolio/before-kitchen-1.jpg",
-    afterImage: "/images/portfolio/after-kitchen-1.jpg",
+    image: "/images/portfolio-4.jpeg",
     tags: ["Renovierung", "Küche", "Modern"],
   },
   {
@@ -56,7 +54,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "neubau",
     description:
       "Komplette Haustechnik für ein Einfamilienhaus mit Fußbodenheizung und Regenwassernutzung.",
-    image: "/images/portfolio/neubau-2.jpg",
+    image: "/images/portfolio-5.jpeg",
     tags: ["Neubau", "Einfamilienhaus", "Haustechnik"],
   },
   {
@@ -65,7 +63,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "gewerbe",
     description:
       "Sanitärinstallation für ein Boutique-Hotel mit 35 Zimmern und Wellnessbereich.",
-    image: "/images/portfolio/gewerbe-2.jpg",
+    image: "/images/portfolio-6.jpeg",
     tags: ["Gewerbe", "Hotel", "Wellness"],
   },
 ];
