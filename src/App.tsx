@@ -1,3 +1,4 @@
+import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
 import TrustBar from "./components/sections/TrustBar";
 import Services from "./components/sections/Services";
@@ -10,6 +11,7 @@ import Footer from "./components/layout/Footer";
 function App() {
   return (
     <main className="bg-space min-h-screen">
+      <Header />
       <Hero />
       <TrustBar />
       <Services />
