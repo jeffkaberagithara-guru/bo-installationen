@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -12,8 +13,18 @@
     overflow-x: hidden;
   }
 
+  * {
+    scroll-behavior: smooth;
+  }
+
+  button,
+  a {
+    @apply touch-manipulation;
+  }
+
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -27,10 +38,115 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-brass;
   }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }
 
 @layer utilities {
   .text-shadow-glow {
     text-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .touch-feedback {
+    @apply active:scale-95 transition-transform duration-150;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .heading-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  .heading-lg {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .heading-md {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .grid-gap-responsive {
+    @apply gap-4 sm:gap-5 md:gap-6 lg:gap-8;
+  }
+
+  .card-lift {
+    @apply transition-all duration-150 hover:-translate-y-1 sm:hover:-translate-y-1.5 md:hover:-translate-y-2;
+  }
+}
+
+/* Custom breakpoint for very small phones */
+@layer utilities {
+  .xs\:block {
+    display: none;
+  }
+  @media (min-width: 480px) {
+    .xs\:block {
+      display: block;
+    }
+  }
+}
+
+/* Touch-friendly spacing for mobile */
+@media (max-width: 640px) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+
+  section {
+    scroll-margin-top: 60px;
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
