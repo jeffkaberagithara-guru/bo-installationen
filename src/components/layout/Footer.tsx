@@ -1,12 +1,11 @@
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ChevronRight, 
-  Clock, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ChevronRight,
+  Clock,
   ShieldCheck,
   PhoneCall,
-  Building2
 } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
@@ -62,10 +61,22 @@ const Footer = () => {
             </p>
             <div className="mt-3 sm:mt-4 flex gap-2 sm:gap-3">
               {[
-                { icon: <FaFacebook className="h-3.5 w-3.5 sm:h-4 sm:w-4" />, label: "Facebook" },
-                { icon: <FaInstagram className="h-3.5 w-3.5 sm:h-4 sm:w-4" />, label: "Instagram" },
-                { icon: <FaLinkedin className="h-3.5 w-3.5 sm:h-4 sm:w-4" />, label: "LinkedIn" },
-                { icon: <FaYoutube className="h-3.5 w-3.5 sm:h-4 sm:w-4" />, label: "YouTube" },
+                {
+                  icon: <FaFacebook className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                  label: "Facebook",
+                },
+                {
+                  icon: <FaInstagram className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                  label: "Instagram",
+                },
+                {
+                  icon: <FaLinkedin className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                  label: "LinkedIn",
+                },
+                {
+                  icon: <FaYoutube className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                  label: "YouTube",
+                },
               ].map((social, i) => (
                 <a
                   key={i}
@@ -79,7 +90,9 @@ const Footer = () => {
             </div>
             <div className="mt-3 sm:mt-4 flex items-center gap-1.5 sm:gap-2 rounded-lg border border-platinum/5 bg-space/30 px-2.5 sm:px-3 py-1.5 sm:py-2 backdrop-blur-sm">
               <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brass" />
-              <span className="text-[10px] sm:text-xs text-platinum/40">Zertifiziert · Versichert</span>
+              <span className="text-[10px] sm:text-xs text-platinum/40">
+                Zertifiziert · Versichert
+              </span>
             </div>
           </div>
 
@@ -145,19 +158,31 @@ const Footer = () => {
             <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3">
               <li className="flex items-start gap-2 sm:gap-3">
                 <div className="mt-0.5 rounded-full bg-brass/10 p-1 sm:p-1.5 text-brass">
-                  <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={1.5} />
+                  <MapPin
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
-                  <span className="text-[10px] sm:text-xs text-platinum/30">Adresse</span>
-                  <p className="text-xs sm:text-sm text-platinum/60">Treustraße 5/2, 1200 Wien</p>
+                  <span className="text-[10px] sm:text-xs text-platinum/30">
+                    Adresse
+                  </span>
+                  <p className="text-xs sm:text-sm text-platinum/60">
+                    Treustraße 5/2, 1200 Wien
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-2 sm:gap-3">
                 <div className="mt-0.5 rounded-full bg-brass/10 p-1 sm:p-1.5 text-brass">
-                  <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={1.5} />
+                  <Phone
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
-                  <span className="text-[10px] sm:text-xs text-platinum/30">Telefon</span>
+                  <span className="text-[10px] sm:text-xs text-platinum/30">
+                    Telefon
+                  </span>
                   <a
                     href="tel:+436602626722"
                     className="block text-xs sm:text-sm text-platinum/60 transition-all duration-150 hover:text-brass"
@@ -168,10 +193,15 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 sm:gap-3">
                 <div className="mt-0.5 rounded-full bg-brass/10 p-1 sm:p-1.5 text-brass">
-                  <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={1.5} />
+                  <Mail
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
-                  <span className="text-[10px] sm:text-xs text-platinum/30">E-Mail</span>
+                  <span className="text-[10px] sm:text-xs text-platinum/30">
+                    E-Mail
+                  </span>
                   <a
                     href="mailto:boinstallateur@gmail.com"
                     className="block text-xs sm:text-sm text-platinum/60 transition-all duration-150 hover:text-brass"
@@ -187,7 +217,9 @@ const Footer = () => {
                 <span className="relative inline-flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-signal" />
               </span>
               <PhoneCall className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-signal" />
-              <span className="text-[10px] sm:text-xs font-medium text-signal">24/7 Notdienst</span>
+              <span className="text-[10px] sm:text-xs font-medium text-signal">
+                24/7 Notdienst
+              </span>
             </div>
           </div>
         </div>
