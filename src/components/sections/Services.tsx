@@ -7,6 +7,7 @@ import {
   Package,
   ArrowRight,
   Sparkles,
+  Star,
 } from "lucide-react";
 
 interface Service {
@@ -80,7 +81,13 @@ const iconMap = {
   Package: Package,
 };
 
-const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+const ServiceCard = ({
+  service,
+  index,
+}: {
+  service: Service;
+  index: number;
+}) => {
   const IconComponent = iconMap[service.icon as keyof typeof iconMap];
 
   return (
@@ -102,7 +109,10 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
       )}
 
       <div className="mb-3 sm:mb-4 inline-flex rounded-lg bg-brass/10 p-2 sm:p-2.5 md:p-3 text-brass transition-all duration-150 group-hover:bg-brass/20 group-hover:shadow-[0_0_40px_rgba(201,168,76,0.2)]">
-        <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" strokeWidth={1.5} />
+        <IconComponent
+          className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
+          strokeWidth={1.5}
+        />
       </div>
 
       <h3 className="mb-1.5 sm:mb-2 text-base sm:text-lg md:text-xl font-semibold text-white">
@@ -115,7 +125,10 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 
       <ul className="mb-4 sm:mb-5 md:mb-6 space-y-1 sm:space-y-1.5">
         {service.features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-platinum/40">
+          <li
+            key={i}
+            className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-platinum/40"
+          >
             <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-brass/60" />
             <span>{feature}</span>
           </li>
@@ -135,7 +148,10 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 
 const Services = () => {
   return (
-    <section id="services" className="relative py-16 sm:py-20 md:py-24 bg-space overflow-hidden">
+    <section
+      id="services"
+      className="relative py-16 sm:py-20 md:py-24 bg-space overflow-hidden"
+    >
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 right-0 h-48 sm:h-64 md:h-96 w-48 sm:w-64 md:w-96 rounded-full bg-brass/5 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-48 sm:h-64 md:h-96 w-48 sm:w-64 md:w-96 rounded-full bg-electric/5 blur-3xl" />
