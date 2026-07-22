@@ -21,6 +21,15 @@ const Header = () => {
     { label: "Notdienst", href: "#emergency" },
   ];
 
+  // Scroll to top function
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -31,8 +40,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
+          {/* Logo - Click to scroll to top */}
+          <a
+            href="/"
+            onClick={scrollToTop}
+            className="flex items-center gap-2 sm:gap-3 group flex-shrink-0 cursor-pointer"
+          >
             <div className="relative">
               <img
                 src="/images/logo.png"
